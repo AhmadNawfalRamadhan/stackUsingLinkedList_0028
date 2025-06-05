@@ -52,7 +52,26 @@ class Stack
             return;
         }
         cout << "popped value: " << top->data << endl;
-        top = top->next
+        top = top->next;
+    }
+
+    //peek/top operation: retrieve the value of the topmost element without removing it
+    void peek()
+    {
+        if (isEmpty())
+        {
+            cout << "List is empty." << endl;
+        }
+        else
+        {
+            Node *current = top;
+            while (current != NULL)
+            {
+                cout << current->data << " " << endl;
+                current = current->next;
+            }
+            cout << endl;
+        } // return the value of the top node
     }
 
 };
